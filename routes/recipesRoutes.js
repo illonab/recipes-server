@@ -9,15 +9,15 @@ const {
   changeComment,
 } = require("../controllers/recipesController");
 
-router.get("/all", getRecipesData); //
+router.get("/all", getRecipesData);
 
-router.get("/favorites", displayFavorites); //
+router.get("/favorites", displayFavorites);
 
-router.post("/favorites/:id", addOneFavorite); //
+router.post("/favorites/:id", addOneFavorite);
 
-router.delete("/favorites/:id", deleteFavorite); //
+router.delete("/favorites/:id", deleteFavorite);
 
-router.post("/favorites/:id/comments", addComments); //
+router.post("/favorites/:id/comments", addComments);
 
 router.put("/favorites/:favoriteId/comments/:commentId", changeComment);
 

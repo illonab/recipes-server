@@ -18,7 +18,7 @@ app.use(router);
 
 app.get("/", (req, res) => {
   res.send(
-    "Welcome to Gluten Free Recipes API! Here you can search for random 10 gluten free recipes. Add recipes to your favourites. Update and delete your favourite recipes list"
+    "Welcome to Gluten Free Recipes API! <br> Here you can search for random 10 gluten free recipes. <br> Add recipes to your favourites. Update and delete your favourite recipes list"
   );
 });
 
