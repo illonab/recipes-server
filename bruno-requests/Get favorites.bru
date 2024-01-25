@@ -1,0 +1,19 @@
+meta {
+  name: Get favorites
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:3000/favorites
+  body: none
+  auth: none
+}
+
+body:json {
+  {"hard"}
+}
+
+body:text {
+  {"text": "hard"}
+}

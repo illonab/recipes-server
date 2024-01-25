@@ -1,0 +1,15 @@
+meta {
+  name: Add comment
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/favorites/65b2cad96136cfa42931f6d9/comments
+  body: json
+  auth: none
+}
+
+body:json {
+  {"text": "hello"}
+}
