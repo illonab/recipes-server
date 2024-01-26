@@ -5,6 +5,7 @@ const commentSchema = new mongoose.Schema({
     type: String,
   },
 });
+
 const recipeSchema = new mongoose.Schema({
   title: {
     type: String,

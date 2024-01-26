@@ -65,7 +65,6 @@ exports.deleteFavorite = async (req, res, next) => {
 exports.addComments = async (req, res) => {
   const recipeId = req.params.id;
   const favorite = await Recipe.findById(recipeId);
-  console.log(favorite);
   favorite.comments.push({ text: req.body.text });
   await favorite.save();
   res.send(favorite);
