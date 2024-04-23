@@ -1,8 +1,10 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const router = require("./routes/recipesRoutes");
+const cookieParser = require("cookie-parser");
 
 const mongoose = require("mongoose");
 mongoose
@@ -13,6 +15,15 @@ mongoose
   .then(() => console.log("MongoDB connected..."))
   .catch((err) => console.log(err));
 
+app.use(cookieParser());
+
+//for sending cookies with axios req
+app.use(
+  cors({
+    credentials: true,
+    origin: (origin, callback) => callback(null, true),
+  })
+);
 app.use(express.json());
 app.use(router);
 

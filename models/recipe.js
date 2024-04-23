@@ -19,6 +19,9 @@ const recipeSchema = new mongoose.Schema({
   gluten: {
     type: String,
   },
+  userId: {
+    type: String,
+  },
   comments: [commentSchema],
 });
 
